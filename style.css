@@ -21,6 +21,17 @@ section {
   font-family: "Merriweather", serif;
 }
 
+h2 {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-size: 18px;
+  margin-left: 2px;
+}
+
+h2.header_2 {
+  margin-bottom: 20px;
+}
+
 /* navbar section */
 .navbar {
   display: flex;
@@ -50,20 +61,70 @@ section {
 /* greeting section */
 .card {
   /* border: 1.5px dotted red; */
-  height: 135px;
   padding: 15px 20px;
   border-radius: 16px;
-  background: linear-gradient(to bottom right, #00c9ff, #92fe9d);
   box-shadow: 0px 8px 10px #3f3f3f48;
   display: flex;
   flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.card.greeting_card {
+  height: 135px;
   justify-content: space-between;
+  background: linear-gradient(to bottom right, #00c9ff, #92fe9d);
 }
 
 .time_div {
   margin-left: -1px;
   font-family: "Rubik", sans-serif;
   font-size: 35px;
+  font-weight: 500;
+}
+
+/* Upcoming next section */
+
+.card.next_lec_card {
+  /* justify-content: space-between; */
+  background: rgb(206, 236, 255);
+}
+
+.card.later_lec_card {
+  background: rgb(255, 241, 255);
+}
+
+.card_lec_title {
+  font-family: "Merriweather", serif;
+  color: rgb(151, 133, 151);
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.card_lec_hall,
+.card_lec_time {
+  font-family: "Rubik", sans-serif;
+  color: rgb(131, 106, 131);
+  font-size: 18px;
+}
+
+.card_lec_time {
+  font-size: 20px;
+}
+
+#lec_next_title,
+#lec_next_status {
+  color: rgb(16, 82, 124);
+}
+
+#lec_next_hall,
+#lec_next_time {
+  color: rgb(62, 100, 124);
+}
+
+#lec_next_status {
+  margin-top: 20px;
+  font-family: "Rubik", sans-serif;
+  font-size: 21px;
   font-weight: 500;
 }
 

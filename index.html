@@ -23,7 +23,7 @@
     </header>
 
     <!-- Greeting section -->
-    <section>
+    <section id="greeting_section">
       <div id="greeting_card" class="container">
         <div class="card greeting_card">
           <div class="greeting">
@@ -40,6 +40,54 @@
       </div>
       <!-- <p id="username">Hello</p>
       <p id="date"></p> -->
+    </section>
+
+    <section id="upcoming_section">
+      <div class="container">
+        <h2 class="header_2">
+          Upcoming next <span id="next_day">today</span>,
+        </h2>
+        <div class="cards_wrapper">
+          <!-- Next lecture card -->
+          <div class="card next_lec_card">
+            <div class="lecture_details">
+              <p id="lec_next_title" class="card_lec_title">OOC Practical</p>
+              <p id="lec_next_hall" class="card_lec_hall">NEW HALL 01</p>
+              <p id="lec_next_time" class="card_lec_time">
+                <span id="lec_next_start_time">2:30 PM</span> -
+                <span id="lec_next_end_time"></span>3:30 PM
+              </p>
+            </div>
+            <p id="lec_next_status">
+              <span id="started_state">Starts in </span>
+              <span id="time_state">10 mins</span>
+            </p>
+          </div>
+
+          <!-- Later lecture cards -->
+          <div class="card later_lec_card">
+            <div class="lecture_details">
+              <p id="lec_2_title" class="card_lec_title">OOC Lecture</p>
+              <p id="lec_2_hall" class="card_lec_hall">NEW HALL 01</p>
+              <p id="lec_2_time" class="card_lec_time">
+                <span id="lec_2_start_time">2:30 PM</span> -
+                <span id="lec_2_end_time"></span>3:30 PM
+              </p>
+            </div>
+          </div>
+
+          <div class="card later_lec_card">
+            <div class="lecture_details">
+              <p id="lec_3_title" class="card_lec_title">SPM Practical</p>
+              <p id="lec_3_hall" class="card_lec_hall">NEW HALL 01</p>
+              <p id="lec_3_time" class="card_lec_time">
+                <span id="lec_3_start_time">2:30 PM</span> -
+                <span id="lec_3_end_time"></span>3:30 PM
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer section -->
