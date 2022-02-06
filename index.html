@@ -27,15 +27,34 @@
       <div id="greeting_card" class="container">
         <div class="card greeting_card">
           <div class="greeting">
-            <p class="text"><span class="day_time"></span></p>
+            <p class="text">
+              <span id="day_time">Good morning, </span>
+              <span id="username"></span>!
+            </p>
+            <p id="date" class="text"></p>
           </div>
-          <div class="time"></div>
+          <div class="time_div">
+            <span class="time">10:25</span> <span class="am_pm">AM</span>
+          </div>
         </div>
       </div>
       <!-- <p id="username">Hello</p>
       <p id="date"></p> -->
     </section>
-    <button type="button" onclick="clearCookies()">Clear cookies</button>
+
+    <!-- Footer section -->
+    <footer>
+      <div class="footer">
+        <p class="text">
+          Footer text here.
+          <a href="https://github.com/pawan-live/lecture-timetable-app"
+            >Contribute on GitHub 💚</a
+          >
+          <button type="button" onclick="clearCookies()">Clear cookies</button>
+        </p>
+      </div>
+    </footer>
+
     <script src="main.js"></script>
   </body>
 </html>

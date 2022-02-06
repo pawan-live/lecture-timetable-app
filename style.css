@@ -5,12 +5,23 @@
   padding: 0;
 }
 
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
 .container {
-  width: 800px;
+  width: 100%;
+  padding: 15px 20px;
+}
+
+.text {
+  font-family: "Merriweather", serif;
 }
 
 /* navbar section */
-
 .navbar {
   display: flex;
   flex-direction: row;
@@ -37,3 +48,36 @@
 }
 
 /* greeting section */
+.card {
+  /* border: 1.5px dotted red; */
+  height: 135px;
+  padding: 15px 20px;
+  border-radius: 16px;
+  background: linear-gradient(to bottom right, #00c9ff, #92fe9d);
+  box-shadow: 0px 8px 10px #3f3f3f48;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.time_div {
+  margin-left: -1px;
+  font-family: "Rubik", sans-serif;
+  font-size: 35px;
+  font-weight: 500;
+}
+
+/* footer section */
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  padding: 15px 0;
+  padding-left: 20px;
+  font-family: "Merriweather", serif;
+  font-weight: 500;
+  font-size: 16px;
+}

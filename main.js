@@ -16,16 +16,13 @@ group = getCookie("group");
 // console.log("Cookies retrieved successfully");
 
 // display name & group
-/*
-document.getElementById("username").innerHTML = "Hello " + username + "!";
-document.getElementById("group").innerHTML = group;
- 
+
+document.getElementById("username").innerHTML = username;
+// document.getElementById("group").innerHTML = group;
 
 // display date month day
 document.getElementById("date").innerHTML =
   "It's " + date[0] + ", " + date[1] + " " + date[2];
-  
-*/
 
 /* FUNCTIONS */
 
