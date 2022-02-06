@@ -14,16 +14,26 @@
     <title>Timetable for Group 4</title>
   </head>
   <body>
-    <!-- header and navbar -->
+    <!-- Header and navbar -->
     <header>
       <div class="navbar">
         <h1 class="header_navbar">Timetable</h1>
         <p id="group" class="group_label_navbar">4.2</p>
       </div>
     </header>
+
+    <!-- Greeting section -->
     <section>
-      <p id="username">Hello</p>
-      <p id="date"></p>
+      <div id="greeting_card" class="container">
+        <div class="card greeting_card">
+          <div class="greeting">
+            <p class="text"><span class="day_time"></span></p>
+          </div>
+          <div class="time"></div>
+        </div>
+      </div>
+      <!-- <p id="username">Hello</p>
+      <p id="date"></p> -->
     </section>
     <button type="button" onclick="clearCookies()">Clear cookies</button>
     <script src="main.js"></script>
