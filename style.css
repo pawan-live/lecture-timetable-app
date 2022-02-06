@@ -9,6 +9,8 @@
   width: 800px;
 }
 
+/* navbar section */
+
 .navbar {
   display: flex;
   flex-direction: row;
@@ -33,3 +35,5 @@
   background-color: rgb(194, 255, 132);
   border-radius: 50px;
 }
+
+/* greeting section */
