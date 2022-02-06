@@ -1,0 +1,35 @@
+/* font-family: 'Merriweather', serif; */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 800px;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: left;
+  border-bottom: 2px solid black;
+}
+
+.header_navbar {
+  padding: 15px 0;
+  padding-left: 20px;
+  font-family: "Merriweather", serif;
+  font-weight: 900;
+  font-size: 28px;
+}
+
+.group_label_navbar {
+  margin-left: 10px;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  padding: 2px 9px 2px 7px;
+  background-color: rgb(194, 255, 132);
+  border-radius: 50px;
+}
