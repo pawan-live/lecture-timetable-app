@@ -1,6 +1,8 @@
+// set focus to nick name field upon load
 window.onload = function () {
   document.getElementById("nickname").focus();
 };
+
 var username, group;
 const date = findDate();
 
@@ -10,7 +12,7 @@ if (cookies == false) {
   //get username and group
   getUsernameAndGroup();
 
-  document.getElementById("nickname").focus();
+  document.getElementById("nickname").focus(); //focus nickname field
 
   setCookie("username", username, 120);
   setCookie("group", group, 120);
@@ -42,19 +44,7 @@ function checkCookies() {
 }
 
 //Get Username and Group
-function getUsernameAndGroup() {
-  do {
-    username = prompt("Enter your nick name");
-    if (username == null || username == "") {
-      continue;
-    } else {
-      group = prompt("Enter your semester group (4.1/4.2)");
-      if (group != "4.1" || group != "4.2") {
-        continue;
-      }
-    }
-  } while (username == null || username == "");
-}
+function getUsernameAndGroup() {}
 
 // Set a Cookie
 function setCookie(cName, cValue, expDays) {
