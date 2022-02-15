@@ -145,6 +145,11 @@ h2.header_2 {
 }
 
 /* login section */
+
+#login-section {
+  display: none;
+}
+
 .login-wrapper {
   height: 100vh;
   width: 100vw;
@@ -156,4 +161,58 @@ h2.header_2 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.login-form {
+  background: linear-gradient(to bottom right, #9796f073, #fbc7d47c);
+  padding: 30px 30px;
+  border-radius: 25px;
+  border: 1px solid #ceceff73;
+  box-shadow: 2px 2px 15px rgba(54, 54, 54, 0.4);
+}
+
+.text.login-form-title {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.text.form-label {
+  font-size: 18px;
+  /* padding-top: 70px; */
+}
+
+#login-submit-btn {
+  font-family: "Merriweather", serif;
+  /* margin-top: 25px; */
+  font-size: 18px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid black;
+  cursor: pointer;
+  margin-top: 6px;
+  float: right;
+}
+
+#login-submit-btn:hover {
+  background-color: rgba(255, 255, 255, 0.76);
+  transition: 0.3s ease-in-out;
+}
+
+.form-field {
+  margin: 5px 0 14px 0;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  padding: 2px 5px;
+  border-radius: 5px;
+  width: 50%;
+}
+
+#group-dropdown {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 2px 5px;
+  margin: 5px 0 12px 0;
 }

@@ -91,15 +91,15 @@
     </section>
 
     <!-- Login section -->
-    <section>
+    <section id="login-section">
       <div class="login-wrapper">
         <div class="login-form">
-          <div class="container">
-            <p class="text">Hello 👋</p>
+          <!-- <div class="container"> -->
+            <p class="text login-form-title">Hello 👋</p>
             <form id="login-form">
               <!-- field 1 -->
               <label class="text form-label" for="nickname"
-                >Your name or nickname:</label
+                >Your name/nickname:</label
               ><br />
               <input
                 class="form-field"
@@ -108,15 +108,13 @@
                 name="nickname"
               /><br />
               <!-- field 2 -->
-              <label class="text form-label" for="nickname"
-                >Your name or nickname:</label
-              ><br />
-              <label for="cars">Choose a car:</label>
-              <select name="cars" id="cars" form="carform">
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="opel">Opel</option>
-                <option value="audi">Audi</option>
+              
+              <label class="text form-label" for="group-dropdown"
+                >Select your subgroup:</label
+              > <br>
+              <select name="group" id="group-dropdown" form="carform">
+                <option value="4.1">4.1</option>
+                <option value="4.2">4.2</option>
               </select>
               <br />
               <!-- submit btn -->
