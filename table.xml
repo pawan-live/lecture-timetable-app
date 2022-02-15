@@ -1,0 +1,247 @@
+<?xml version="1.0" ?>
+
+<groups>
+    <4_2>
+        <mon>
+            <8_30> 
+                <sub></sub> 
+                <lec></lec> 
+                <hall></hall> 
+            </8_30>
+            <9_30> 
+                <sub></sub> 
+                <lec></lec> 
+                <hall></hall> 
+            </9_30>
+            <10_30> 
+                <sub>SPM Lecture</sub> 
+                <lec></lec> 
+                <hall>N3E</hall> 
+            </10_30>
+            <11_30> 
+                <sub>SPM Lecture</sub> 
+                <lec></lec> 
+                <hall>N3E</hall> 
+            </11_30>
+            <12_30> 
+                <sub> </sub> 
+                <lec> </lec> 
+                <hall> </hall> 
+            </12_30>
+            <13_30> 
+                <sub> </sub> 
+                <lec> </lec> 
+                <hall> </hall> 
+            </13_30>
+            <14_30> 
+                <sub> </sub> 
+                <lec> </lec> 
+                <hall> </hall> 
+            </14_30>
+            <15_30> 
+                <sub> </sub> 
+                <lec> </lec> 
+                <hall> </hall> 
+            </15_30>
+            <16_30> 
+                <sub> </sub> 
+                <lec> </lec> 
+                <hall> </hall> 
+            </16_30>
+            
+        </mon>
+        <tue>
+            <8_30> 
+                <sub> </sub> 
+                <lec> </lec> 
+                <hall> </hall> 
+            </8_30>
+            <9_30> 
+                <sub> </sub> 
+                <lec> </lec> 
+                <hall> </hall> 
+            </9_30>
+            <10_30> 
+                <sub> </sub> 
+                <lec> </lec> 
+                <hall> </hall> 
+            </10_30>
+            <11_30> 
+                <sub> </sub> 
+                <lec> </lec> 
+                <hall> </hall> 
+            </11_30>
+            <12_30> 
+                <sub> </sub> 
+                <lec> </lec> 
+                <hall> </hall> 
+            </12_30>
+            <13_30> 
+                <sub> </sub> 
+                <lec> </lec> 
+                <hall> </hall> 
+            </13_30>
+            <14_30> 
+                <sub> </sub> 
+                <lec> </lec> 
+                <hall> </hall> 
+            </14_30>
+            <15_30> 
+                <sub> </sub> 
+                <lec> </lec> 
+                <hall> </hall> 
+            </15_30>
+            <16_30> 
+                <sub> </sub> 
+                <lec> </lec> 
+                <hall> </hall> 
+            </16_30>
+            
+        </tue>
+        <wed>
+            <8_30> 
+                <sub> </sub> 
+                <lec> </lec> 
+                <hall> </hall> 
+            </8_30>
+            <9_30> 
+                <sub> </sub> 
+                <lec> </lec> 
+                <hall> </hall> 
+            </9_30>
+            <10_30> 
+                <sub> </sub> 
+                <lec> </lec> 
+                <hall> </hall> 
+            </10_30>
+            <11_30> 
+                <sub> </sub> 
+                <lec> </lec> 
+                <hall> </hall> 
+            </11_30>
+            <12_30> 
+                <sub> </sub> 
+                <lec> </lec> 
+                <hall> </hall> 
+            </12_30>
+            <13_30> 
+                <sub> </sub> 
+                <lec> </lec> 
+                <hall> </hall> 
+            </13_30>
+            <14_30> 
+                <sub> </sub> 
+                <lec> </lec> 
+                <hall> </hall> 
+            </14_30>
+            <15_30> 
+                <sub> </sub> 
+                <lec> </lec> 
+                <hall> </hall> 
+            </15_30>
+            <16_30> 
+                <sub> </sub> 
+                <lec> </lec> 
+                <hall> </hall> 
+            </16_30>
+            
+        </wed>
+        <thu>
+            <8_30> 
+                <sub> </sub> 
+                <lec> </lec> 
+                <hall> </hall> 
+            </8_30>
+            <9_30> 
+                <sub> </sub> 
+                <lec> </lec> 
+                <hall> </hall> 
+            </9_30>
+            <10_30> 
+                <sub> </sub> 
+                <lec> </lec> 
+                <hall> </hall> 
+            </10_30>
+            <11_30> 
+                <sub> </sub> 
+                <lec> </lec> 
+                <hall> </hall> 
+            </11_30>
+            <12_30> 
+                <sub> </sub> 
+                <lec> </lec> 
+                <hall> </hall> 
+            </12_30>
+            <13_30> 
+                <sub> </sub> 
+                <lec> </lec> 
+                <hall> </hall> 
+            </13_30>
+            <14_30> 
+                <sub> </sub> 
+                <lec> </lec> 
+                <hall> </hall> 
+            </14_30>
+            <15_30> 
+                <sub> </sub> 
+                <lec> </lec> 
+                <hall> </hall> 
+            </15_30>
+            <16_30> 
+                <sub> </sub> 
+                <lec> </lec> 
+                <hall> </hall> 
+            </16_30>
+            
+        </thu>
+        <fri>
+            <8_30> 
+                <sub> </sub> 
+                <lec> </lec> 
+                <hall> </hall> 
+            </8_30>
+            <9_30> 
+                <sub> </sub> 
+                <lec> </lec> 
+                <hall> </hall> 
+            </9_30>
+            <10_30> 
+                <sub> </sub> 
+                <lec> </lec> 
+                <hall> </hall> 
+            </10_30>
+            <11_30> 
+                <sub> </sub> 
+                <lec> </lec> 
+                <hall> </hall> 
+            </11_30>
+            <12_30> 
+                <sub> </sub> 
+                <lec> </lec> 
+                <hall> </hall> 
+            </12_30>
+            <13_30> 
+                <sub> </sub> 
+                <lec> </lec> 
+                <hall> </hall> 
+            </13_30>
+            <14_30> 
+                <sub> </sub> 
+                <lec> </lec> 
+                <hall> </hall> 
+            </14_30>
+            <15_30> 
+                <sub> </sub> 
+                <lec> </lec> 
+                <hall> </hall> 
+            </15_30>
+            <16_30> 
+                <sub> </sub> 
+                <lec> </lec> 
+                <hall> </hall> 
+            </16_30>
+            
+        </fri>
+    </4_2>
+    
+</groups>

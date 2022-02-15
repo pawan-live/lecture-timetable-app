@@ -1,3 +1,6 @@
+window.onload = function () {
+  document.getElementById("nickname").focus();
+};
 var username, group;
 const date = findDate();
 
@@ -6,6 +9,9 @@ let cookies = checkCookies();
 if (cookies == false) {
   //get username and group
   getUsernameAndGroup();
+
+  document.getElementById("nickname").focus();
+
   setCookie("username", username, 120);
   setCookie("group", group, 120);
   // console.log("cookies set successfully");
