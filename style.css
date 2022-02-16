@@ -207,6 +207,7 @@ h2.header_2 {
   padding: 2px 5px;
   border-radius: 5px;
   width: 50%;
+  border: 1px solid black;
 }
 
 #group-dropdown {

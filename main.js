@@ -1,5 +1,12 @@
 var username, group;
 const date = findDate();
+const loginScreen = document.getElementById("login-section");
+
+// onclick Dummy button
+document.getElementById("dummy-button").addEventListener("click", function () {
+  document.getElementById("login-section").style.display = "block";
+  console.log("login screen display success");
+});
 
 //Check for cookies
 let cookies = checkCookies();
@@ -42,9 +49,17 @@ function checkCookies() {
 
 //Get Username and Group
 function loadLoginScreen() {
-  document.getElementById("login-section").style.display = "block";
+  loginScreen.style.display = "block";
   document.getElementById("nickname").focus();
+  console.log("display login screen success");
 }
+
+// login screen code
+document
+  .getElementById("login-submit-btn")
+  .addEventListener("click", function () {
+    loginScreen.style.display = "none";
+  });
 
 // function getUsernameAndGroup() {
 //   do {
