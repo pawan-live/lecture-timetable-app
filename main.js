@@ -1,29 +1,26 @@
-// set focus to nick name field upon load
-window.onload = function () {
-  document.getElementById("nickname").focus();
-};
-
 var username, group;
 const date = findDate();
 
 //Check for cookies
 let cookies = checkCookies();
 if (cookies == false) {
-  //get username and group
-  getUsernameAndGroup();
+  //load login prompt and get username + group
+  loadLoginScreen();
 
-  document.getElementById("nickname").focus(); //focus nickname field
+  //focus nickname field
+  document.getElementById("nickname").focus();
 
   setCookie("username", username, 120);
   setCookie("group", group, 120);
-  // console.log("cookies set successfully");
+  console.log("cookies set successfully");
 }
 
 username = getCookie("username");
 group = getCookie("group");
-// console.log("Cookies retrieved successfully");
+console.log("Cookies retrieved successfully");
 
 // display name & group
+console.log(username + " " + group);
 
 document.getElementById("username").innerHTML = username;
 // document.getElementById("group").innerHTML = group;
@@ -44,7 +41,9 @@ function checkCookies() {
 }
 
 //Get Username and Group
-function getUsernameAndGroup() {}
+function loadLoginScreen() {
+  document.getElementById("login-section").style.display = "block";
+}
 
 // Set a Cookie
 function setCookie(cName, cValue, expDays) {
