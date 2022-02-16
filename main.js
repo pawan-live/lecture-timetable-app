@@ -43,7 +43,22 @@ function checkCookies() {
 //Get Username and Group
 function loadLoginScreen() {
   document.getElementById("login-section").style.display = "block";
+  document.getElementById("nickname").focus();
 }
+
+// function getUsernameAndGroup() {
+//   do {
+//     username = prompt("Enter your nick name");
+//     if (username == null || username == "") {
+//       continue;
+//     } else {
+//       group = prompt("Enter your semester group (4.1/4.2)");
+//       if (group != "4.1" || group != "4.2") {
+//         continue;
+//       }
+//     }
+//   } while (username == null || username == "");
+// }
 
 // Set a Cookie
 function setCookie(cName, cValue, expDays) {
