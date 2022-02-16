@@ -1,6 +1,6 @@
-window.onload = function () {
-  document.getElementById("nickname").focus();
-};
+// window.onload = function () {
+//   document.getElementById("nickname").focus();
+// };
 var username, group;
 const date = findDate();
 
