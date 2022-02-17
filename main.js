@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-// window.onload = function () {
-//   document.getElementById("nickname").focus();
-// };
-=======
->>>>>>> 1e9eb749367936c73058dfd05be1dc22b284dcdf
 var username, group;
+
 const date = findDate();
 const loginScreen = document.getElementById("login-section");
 
@@ -44,6 +39,9 @@ if (cookies == false) {
 document.getElementById("date").innerHTML =
   "It's " + date[0] + ", " + date[1] + " " + date[2];
 
+document.getElementById("time_now").innerHTML = date[3];
+document.getElementById("am_pm").innerHTML = date[4];
+
 /* FUNCTIONS */
 
 //Check cookies
@@ -63,13 +61,12 @@ function loadLoginScreen(callback) {
 }
 
 // set username and group on display
-function displayUserDetails(callback) {
+function displayUserDetails() {
   username = getCookie("username");
   group = getCookie("group");
   console.log(username + " " + group);
   document.getElementById("username").innerHTML = username;
   document.getElementById("group").innerHTML = group;
-  callback();
 }
 
 // Get username and group from login screen
@@ -145,6 +142,25 @@ function findDate() {
   dateArray[0] = weekday[d.getDay()];
   dateArray[1] = month[d.getMonth()];
   dateArray[2] = d.getDate();
-  dateArray[3] = d.getHours() + ":" + d.getMinutes();
+  let minutes = d.getMinutes().toLocaleString("en-US", {
+    minimumIntegerDigits: 2,
+    useGrouping: false,
+  });
+  let hours = d.getHours().toLocaleString("en-US", {
+    minimumIntegerDigits: 2,
+    useGrouping: false,
+  });
+  dateArray[3] = hours + ":" + minutes;
+
+  if (d.getHours() >= 12) {
+    dateArray[4] = "PM";
+  } else {
+    dateArray[4] = "AM";
+  }
+  if (d.getHours() == 0) {
+    dateArray[3] = hours + 12 + ":" + minutes;
+    dateArray[4] = "AM";
+  }
+
   return dateArray;
 }
