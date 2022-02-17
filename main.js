@@ -3,11 +3,6 @@ var username, group;
 const date = findDate();
 const loginScreen = document.getElementById("login-section");
 
-// onclick Dummy button
-document.getElementById("dummy-button").addEventListener("click", function () {
-  document.getElementById("login-section").style.display = "block";
-});
-
 //Check for cookies
 let cookies = checkCookies();
 if (cookies == false) {
@@ -22,6 +17,10 @@ if (cookies == false) {
           setCookie("group", group, 120);
           console.log("cookies set successfully");
           displayUserDetails(); //displays username and group
+          document.getElementById("profile-pic").src =
+            "https://avatars.dicebear.com/api/adventurer-neutral/" +
+            username +
+            ".svg";
         });
         loginScreen.style.display = "none";
       });
@@ -45,7 +44,7 @@ document.getElementById("am_pm").innerHTML = date[4];
 /* FUNCTIONS */
 
 //Check cookies
-function checkCookies() {
+https: function checkCookies() {
   if (document.cookie == "") {
     return false;
   } else {
@@ -164,3 +163,5 @@ function findDate() {
 
   return dateArray;
 }
+
+/* Avatar art Adventurer Neutral Lisa Wischofsky	https://www.instagram.com/lischis_adventures/	CC BY 4.0 */
