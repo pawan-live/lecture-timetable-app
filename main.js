@@ -1,30 +1,38 @@
-window.onload = function () {
-  document.getElementById("nickname").focus();
-};
 var username, group;
 const date = findDate();
+const loginScreen = document.getElementById("login-section");
+
+// onclick Dummy button
+document.getElementById("dummy-button").addEventListener("click", function () {
+  document.getElementById("login-section").style.display = "block";
+});
 
 //Check for cookies
 let cookies = checkCookies();
 if (cookies == false) {
-  //get username and group
-  getUsernameAndGroup();
-
-  document.getElementById("nickname").focus();
-
-  setCookie("username", username, 120);
-  setCookie("group", group, 120);
-  // console.log("cookies set successfully");
+  //load login prompt and get username + group
+  loadLoginScreen(function () {
+    document.getElementById("nickname").focus(); //set focus to field
+    document // OK button code
+      .getElementById("login-submit-btn")
+      .addEventListener("click", function () {
+        getUserInfo(function () {
+          setCookie("username", username, 120);
+          setCookie("group", group, 120);
+          console.log("cookies set successfully");
+          displayUserDetails(); //displays username and group
+        });
+        loginScreen.style.display = "none";
+      });
+  });
+} else {
+  //read from cookies
+  username = getCookie("username");
+  group = getCookie("group");
+  displayUserDetails(function () {
+    console.log("display successful");
+  });
 }
-
-username = getCookie("username");
-group = getCookie("group");
-// console.log("Cookies retrieved successfully");
-
-// display name & group
-
-document.getElementById("username").innerHTML = username;
-// document.getElementById("group").innerHTML = group;
 
 // display date month day
 document.getElementById("date").innerHTML =
@@ -42,18 +50,28 @@ function checkCookies() {
 }
 
 //Get Username and Group
-function getUsernameAndGroup() {
-  do {
-    username = prompt("Enter your nick name");
-    if (username == null || username == "") {
-      continue;
-    } else {
-      group = prompt("Enter your semester group (4.1/4.2)");
-      if (group != "4.1" || group != "4.2") {
-        continue;
-      }
-    }
-  } while (username == null || username == "");
+function loadLoginScreen(callback) {
+  loginScreen.style.display = "block";
+  document.getElementById("nickname").focus();
+  callback();
+}
+
+// set username and group on display
+function displayUserDetails(callback) {
+  username = getCookie("username");
+  group = getCookie("group");
+  console.log(username + " " + group);
+  document.getElementById("username").innerHTML = username;
+  document.getElementById("group").innerHTML = group;
+  callback();
+}
+
+// Get username and group from login screen
+function getUserInfo(callback) {
+  username = document.getElementById("nickname").value;
+  group = document.getElementById("group-dropdown").value;
+  console.log("User details read success");
+  callback();
 }
 
 // Set a Cookie
@@ -121,5 +139,6 @@ function findDate() {
   dateArray[0] = weekday[d.getDay()];
   dateArray[1] = month[d.getMonth()];
   dateArray[2] = d.getDate();
+  dateArray[3] = d.getHours() + ":" + d.getMinutes();
   return dateArray;
 }
