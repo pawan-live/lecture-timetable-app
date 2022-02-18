@@ -17,10 +17,7 @@ if (cookies == false) {
           setCookie("group", group, 120);
           console.log("cookies set successfully");
           displayUserDetails(); //displays username and group
-          document.getElementById("profile-pic").src =
-            "https://avatars.dicebear.com/api/adventurer-neutral/" +
-            username +
-            ".svg";
+          setAvatar(Math.floor(Math.random() * 100 + 1));
         });
         loginScreen.style.display = "none";
       });
@@ -29,22 +26,32 @@ if (cookies == false) {
   //read from cookies
   username = getCookie("username");
   group = getCookie("group");
-  displayUserDetails(function () {
-    console.log("display successful");
-  });
+  displayUserDetails();
+  setAvatar(Math.floor(Math.random() * 100 + 1));
 }
 
-// display date month day
-document.getElementById("date").innerHTML =
-  "It's " + date[0] + ", " + date[1] + " " + date[2];
+displayTime();
 
-document.getElementById("time_now").innerHTML = date[3];
-document.getElementById("am_pm").innerHTML = date[4];
+// display date month day
 
 /* FUNCTIONS */
 
+// set avatar
+function setAvatar(seed) {
+  document.getElementById("profile-pic").src =
+    "https://avatars.dicebear.com/api/adventurer-neutral/" + seed + ".svg";
+}
+
+// display date, month, day, time
+function displayTime() {
+  document.getElementById("date").innerHTML =
+    "It's " + date[0] + ", " + date[1] + " " + date[2];
+  document.getElementById("time_now").innerHTML = date[3];
+  document.getElementById("am_pm").innerHTML = date[4];
+}
+
 //Check cookies
-https: function checkCookies() {
+function checkCookies() {
   if (document.cookie == "") {
     return false;
   } else {
