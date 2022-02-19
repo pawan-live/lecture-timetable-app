@@ -185,23 +185,57 @@ h2.header_2 {
   /* padding-top: 70px; */
 }
 
-#login-submit-btn {
-  font-family: "Merriweather", serif;
-  /* margin-top: 25px; */
-  font-size: 18px;
-  padding: 8px 12px;
-  border-radius: 10px;
-  background-color: rgb(255, 255, 255);
-  border: 1px solid black;
+/* btn fill animation */
+.submit-btn .btn{
+  font-size: 17px;
+  width: 200px; 
+  padding: 6px 20px;
+  text-align: center;
+  margin: 10px 8px;
+  border-radius: 12px;
+  font-weight: bold;
+  border: 2px solid #21c036;
+  background: transparent;
+  color: rgb(0, 0, 0);
   cursor: pointer;
-  margin-top: 6px;
-  float: right;
+  position: relative; 
+  overflow: hidden;
+}
+span.btn-fill{
+  background: linear-gradient(to bottom right, #21b446, #c2943e);
+  height: 100%;
+  width: 0;
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: 0.5s;
+}
+.submit-btn .btn:hover span.btn-fill{
+  width: 100%;
+}
+.submit-btn .btn:hover{
+  border: 2px solid #49ac22;
 }
 
-#login-submit-btn:hover {
-  background-color: rgba(255, 255, 255, 0.76);
-  transition: 0.3s ease-in-out;
+.submit-btn{
+  animation: move 5s linear infinite;
 }
+@keyframes move{
+  0%{
+    transform: translate(-10px);
+  }
+  50%{
+    transform: translate(+10px);
+  }
+  100%{
+    transform: translate(-10px);
+  }
+}
+/*  */
+
+
 
 .form-field {
   margin: 5px 0 14px 0;
