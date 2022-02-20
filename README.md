@@ -4,3 +4,6 @@ An organized and easy to use time table display.
 • View upcoming lectures (next and later)  
 • Save user's group & nickname in cookies  
 • Display complete timetable for the day  
+
+Main branch is deployed to netlify.
+Deelopment takes place on build branch
