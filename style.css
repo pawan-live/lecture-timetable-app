@@ -71,6 +71,7 @@ h2.header_2 {
 }
 
 .card.greeting_card {
+  margin-bottom: 8px;
   height: 135px;
   justify-content: space-between;
   background: linear-gradient(to bottom right, #00c9ff, #92fe9d);
@@ -148,23 +149,25 @@ h2.header_2 {
 
 #login-section {
   display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .login-wrapper {
   height: 100vh;
   width: 100vw;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.555);
-  backdrop-filter: blur(15px);
+  background: linear-gradient(to bottom right, #59c173, #a17fe0, #f7797d);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .login-form {
-  background: linear-gradient(to bottom right, #9796f073, #fbc7d47c);
+  background: linear-gradient(to bottom right, #ffffff5b, #ffffff1e);
   padding: 30px 30px;
   border-radius: 25px;
   border: 1px solid #ceceff73;
@@ -221,4 +224,7 @@ h2.header_2 {
 #profile-pic {
   width: 100px;
   height: 100px;
+  border-radius: 50px;
 }
+
+/* test comment */
