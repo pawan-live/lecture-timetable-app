@@ -1,4 +1,5 @@
 var username, group;
+var next_status; //stores string values [today, tomorrow, in 2 days,3 days, etc...]
 
 const date = findDate();
 const loginScreen = document.getElementById("login-section");
@@ -30,9 +31,7 @@ if (cookies == false) {
   setAvatar(Math.floor(Math.random() * 100 + 1));
 }
 
-displayTime();
-
-// display date month day
+displayTime(); //displays time in the greeting card
 
 /* FUNCTIONS */
 
@@ -108,6 +107,12 @@ function getCookie(cname) {
   return "";
 }
 
+// Get next lecture day
+/* Accepts next lecture date as argument and returns if 'today', 'tomorrow', 'in x days' [string] */
+function getNextDay() {
+  // code here
+}
+
 // Clear cookies
 function clearCookies() {
   document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
@@ -156,15 +161,21 @@ function findDate() {
     minimumIntegerDigits: 2,
     useGrouping: false,
   });
-  dateArray[3] = hours + ":" + minutes;
 
   if (d.getHours() >= 12) {
     dateArray[4] = "PM";
   } else {
     dateArray[4] = "AM";
   }
+
+  if (d.getHours() > 12 && d.getHours() <= 23) {
+    hours = d.getHours() - 12;
+  }
+
+  dateArray[3] = hours + ":" + minutes;
+
   if (d.getHours() == 0) {
-    dateArray[3] = hours + 12 + ":" + minutes;
+    dateArray[3] = d.getHours() + 12 + ":" + minutes;
     dateArray[4] = "AM";
   }
 
