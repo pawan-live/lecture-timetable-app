@@ -35,6 +35,21 @@ displayTime(); //displays time in the greeting card
 
 /* FUNCTIONS */
 
+// Fetch JSON file
+function fetchJSON() {
+  fetch("./table.json")
+    .then((response) => {
+      return response.json();
+    })
+    .then((jsondata) => {
+      for (var i = 0; i < jsondata.groups.length; i++) {
+        for (var j = 0; j < jsondata.groups[i].data.length; j++) {
+          console.log(jsondata.groups[i].data[j].subject + "\n");
+        }
+      }
+    });
+}
+
 // set avatar
 function setAvatar(seed) {
   document.getElementById("profile-pic").src =
