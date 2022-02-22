@@ -32,6 +32,8 @@ if (cookies == false) {
 }
 
 displayTime(); //displays time in the greeting card
+fetchJSON();
+console.log(date[5]); //24h time
 
 /* FUNCTIONS */
 
@@ -128,6 +130,25 @@ function getNextDay() {
   // code here
 }
 
+var date3 = new Date(); //now
+var date1 = new Date("08/06/2015 00:00");
+var date2 = new Date("08/06/2015 02:56");
+
+var diff = date2.getTime() - date1.getTime();
+var msec = diff;
+console.log(msec);
+var hh = Math.floor(msec / 1000 / 60 / 60);
+msec -= hh * 1000 * 60 * 60;
+var mm = Math.floor(msec / 1000 / 60);
+msec -= mm * 1000 * 60;
+var ss = Math.floor(msec / 1000);
+msec -= ss * 1000;
+console.log(hh + ":" + mm);
+
+function getNextLecTime() {
+  // code here
+}
+
 // Clear cookies
 function clearCookies() {
   document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
@@ -177,6 +198,8 @@ function findDate() {
     useGrouping: false,
   });
 
+  dateArray[5] = hours + ":" + minutes; //24format pure time for calculations
+
   if (d.getHours() >= 12) {
     dateArray[4] = "PM";
   } else {
@@ -187,7 +210,7 @@ function findDate() {
     hours = d.getHours() - 12;
   }
 
-  dateArray[3] = hours + ":" + minutes;
+  dateArray[3] = hours + ":" + minutes; //set time in 12H format for display
 
   if (d.getHours() == 0) {
     dateArray[3] = d.getHours() + 12 + ":" + minutes;
