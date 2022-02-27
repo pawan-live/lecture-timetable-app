@@ -1,11 +1,199 @@
+// JSON DATA temporary fix
+let data = {
+  groups: [
+    {
+      id: "4.1",
+      data: [
+        {
+          day: "mon",
+          start: "10:30",
+          end: "12:30",
+          subject: "SPM",
+          type: "lecture",
+          hall_1: "N3E",
+          hall_2: "",
+        },
+        {
+          day: "mon",
+          start: "13:30",
+          end: "15:30",
+          subject: "OOC",
+          type: "lab",
+          hall_1: "601 PC Lab NEW",
+          hall_2: "N3B Lab",
+        },
+        {
+          day: "mon",
+          start: "16.30",
+          end: "17:30",
+          subject: "OOC",
+          type: "lecture",
+          hall_1: "13H-A",
+          hall_2: "",
+        },
+        {
+          day: "tue",
+          start: "13.30",
+          end: "15:30",
+          subject: "ISDM",
+          type: "lab",
+          hall_1: "B403 PC Lab",
+          hall_2: "A405 PC Lab",
+        },
+        {
+          day: "tue",
+          start: "15.30",
+          end: "17:30",
+          subject: "ISDM",
+          type: "lecture",
+          hall_1: "B501",
+          hall_2: "",
+        },
+      ],
+    },
+    {
+      id: "4.2",
+      data: [
+        {
+          day: "mon",
+          start: "10:30",
+          end: "12:30",
+          subject: "SPM",
+          type: "lecture",
+          hall_1: "N3E",
+          hall_2: "",
+        },
+        {
+          day: "mon",
+          start: "13:30",
+          end: "15:30",
+          subject: "OOC",
+          type: "lab",
+          hall_1: "601 PC Lab NEW",
+          hall_2: "N3B Lab",
+        },
+        {
+          day: "mon",
+          start: "16.30",
+          end: "17:30",
+          subject: "OOC",
+          type: "lecture",
+          hall_1: "13H-A",
+          hall_2: "",
+        },
+        {
+          day: "tue",
+          start: "13.30",
+          end: "15:30",
+          subject: "ISDM",
+          type: "lab",
+          hall_1: "B403 PC Lab",
+          hall_2: "A405 PC Lab",
+        },
+        {
+          day: "tue",
+          start: "15.30",
+          end: "17:30",
+          subject: "ISDM",
+          type: "lecture",
+          hall_1: "B501",
+          hall_2: "",
+        },
+      ],
+    },
+    {
+      id: "3.1",
+      data: [
+        {
+          day: "mon",
+          start: "10:30",
+          end: "12:30",
+          subject: "SPM",
+          type: "lecture",
+          hall_1: "N3E",
+          hall_2: "",
+        },
+        {
+          day: "mon",
+          start: "13:30",
+          end: "15:30",
+          subject: "OOC",
+          type: "lab",
+          hall_1: "601 PC Lab NEW",
+          hall_2: "N3B Lab",
+        },
+        {
+          day: "mon",
+          start: "16.30",
+          end: "17:30",
+          subject: "OOC",
+          type: "lecture",
+          hall_1: "13H-A",
+          hall_2: "",
+        },
+        {
+          day: "tue",
+          start: "13.30",
+          end: "15:30",
+          subject: "ISDM",
+          type: "lab",
+          hall_1: "B403 PC Lab",
+          hall_2: "A405 PC Lab",
+        },
+        {
+          day: "tue",
+          start: "15.30",
+          end: "17:30",
+          subject: "ISDM",
+          type: "lecture",
+          hall_1: "B501",
+          hall_2: "",
+        },
+      ],
+    },
+  ],
+};
+
+let day = "mon";
+let group_id = "4.1";
+/*********** DECLARATIONS ***********/
+
 var username, group;
 var next_status; //stores string values [today, tomorrow, in 2 days,3 days, etc...]
 
+// Create an object array for today's lectures
+const todayLectures = []; //object array to store all details of lectures today
+let nextLectures; //object array to store next upcoming lectures
+// day = today's day. ex: mon, tue etc
+
 const date = findDate();
+
+/*********** DOM ***********/
+
 const loginScreen = document.getElementById("login-section");
+
+/*********** SEQUENCE ***********/
+
+{
+  var date3 = new Date(); //now
+  var date1 = new Date("08/06/2015 00:00");
+  var date2 = new Date("08/06/2015 02:56");
+
+  var diff = date2.getTime() - date1.getTime();
+  var msec = diff;
+  console.log(msec);
+  var hh = Math.floor(msec / 1000 / 60 / 60);
+  msec -= hh * 1000 * 60 * 60;
+  var mm = Math.floor(msec / 1000 / 60);
+  msec -= mm * 1000 * 60;
+  var ss = Math.floor(msec / 1000);
+  msec -= ss * 1000;
+  // console.log(hh + ":" + mm);
+}
 
 //Check for cookies
 let cookies = checkCookies();
+
 if (cookies == false) {
   //load login prompt and get username + group
   loadLoginScreen(function () {
@@ -32,10 +220,38 @@ if (cookies == false) {
 }
 
 displayTime(); //displays time in the greeting card
-fetchJSON();
-console.log(date[5]); //24h time
 
-/* FUNCTIONS */
+// fetch("./table.json")
+//   .then((response) => {
+//     return response.json();
+//   })
+//   .then((jsondata) => {
+//     object = jsondata;
+//     console.log(object);
+//   });
+
+// console.log(date[5]); //24h time
+
+getTodayLecs(function () {
+  console.log(todayLectures);
+});
+
+// console.log(data.groups[1].id);
+
+/********** FUNCTIONS ***********/
+
+function getTodayLecs(callback) {
+  for (let i = 0; i < data.groups.length; i++) {
+    if (data.groups[i].id == group_id) {
+      for (let j = 0; j < data.groups[i].data.length; j++) {
+        if (data.groups[i].data[j].day == day) {
+          todayLectures[j] = data.groups[i].data[j];
+        }
+      }
+    }
+  }
+  callback();
+}
 
 // Fetch JSON file
 function fetchJSON() {
@@ -44,12 +260,10 @@ function fetchJSON() {
       return response.json();
     })
     .then((jsondata) => {
-      for (var i = 0; i < jsondata.groups.length; i++) {
-        for (var j = 0; j < jsondata.groups[i].data.length; j++) {
-          console.log(jsondata.groups[i].data[j].subject + "\n");
-        }
-      }
+      //code here
+      let db = jsondata;
     });
+  return db;
 }
 
 // set avatar
@@ -143,11 +357,7 @@ var mm = Math.floor(msec / 1000 / 60);
 msec -= mm * 1000 * 60;
 var ss = Math.floor(msec / 1000);
 msec -= ss * 1000;
-console.log(hh + ":" + mm);
-
-function getNextLecTime() {
-  // code here
-}
+// console.log(hh + ":" + mm);
 
 // Clear cookies
 function clearCookies() {
@@ -198,7 +408,7 @@ function findDate() {
     useGrouping: false,
   });
 
-  dateArray[5] = hours + ":" + minutes; //24format pure time for calculations
+  dateArray[5] = hours + ":" + minutes; //24format time for calculations
 
   if (d.getHours() >= 12) {
     dateArray[4] = "PM";
@@ -207,7 +417,7 @@ function findDate() {
   }
 
   if (d.getHours() > 12 && d.getHours() <= 23) {
-    hours = d.getHours() - 12;
+    hours = hours - 12;
   }
 
   dateArray[3] = hours + ":" + minutes; //set time in 12H format for display
