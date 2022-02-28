@@ -191,6 +191,9 @@ const loginScreen = document.getElementById("login-section");
   // console.log(hh + ":" + mm);
 }
 
+// testing
+getTimeDifference("23:55");
+
 //Check for cookies
 let cookies = checkCookies();
 
@@ -278,6 +281,48 @@ function displayTime() {
     "It's " + date[0] + ", " + date[1] + " " + date[2];
   document.getElementById("time_now").innerHTML = date[3];
   document.getElementById("am_pm").innerHTML = date[4];
+}
+
+// get time difference
+// uses the findDate() function to extract the
+// current time.
+// assuming item_time is a string in the format
+// "hh:mm"
+function getTimeDifference(item_time) {
+  const date = findDate();
+  const now_time = date[5].split(":");
+  const now_hour = now_time[0];
+  const now_mins = now_time[1];
+
+  const item_time_arr = item_time.split(":");
+  let item_hour = item_time_arr[0];
+  let item_mins = item_time_arr[1];
+
+  if (now_mins > item_mins) {
+    item_mins += 60;
+    --item_hour;
+  }
+
+  let hour_difference = item_hour - now_hour;
+  let min_difference = item_mins - now_mins;
+
+  const time_difference = [2];
+
+  time_difference[0] = hour_difference;
+  time_difference[1] = min_difference;
+
+  console.log("hours: " + now_hour);
+  console.log("minutes: " + now_mins);
+
+  console.log("item hour: " + item_hour);
+  console.log("item mins: " + item_mins);
+
+  console.log("hour dff: " + hour_difference);
+  console.log("min dff: " + min_difference);
+
+  console.log(time_difference);
+
+  return time_difference;
 }
 
 //Check cookies
