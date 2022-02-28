@@ -310,6 +310,7 @@ function displayTime() {
 // current time.
 // assuming item_time is a string in the format
 // "hh:mm"
+
 function getTimeDifference(item_time) {
   const date = findDate();
   const now_time = date[5].split(":");
@@ -318,10 +319,10 @@ function getTimeDifference(item_time) {
 
   const item_time_arr = item_time.split(":");
   let item_hour = item_time_arr[0];
-  let item_mins = item_time_arr[1];
+  let item_mins = parseInt(item_time_arr[1]);
 
   if (now_mins > item_mins) {
-    item_mins += 60;
+    item_mins = item_mins + 60;
     --item_hour;
   }
 
