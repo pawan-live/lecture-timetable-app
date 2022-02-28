@@ -1,13 +1,154 @@
 {
-  "4.1": [
-    { "day": "mon", "time": "8.30", "subject": "IWT", "Hall": "N3C" },
-    { "day": "mon", "time": "10.30", "subject": "OOC", "Hall": "N3C" },
-    { "day": "mon", "time": "13.30", "subject": "OOC", "Hall": "B502" }
-  ],
-
-  "4.2": [
-    { "day": "mon", "time": "8.30", "subject": "IWT", "Hall": "N3C" },
-    { "day": "mon", "time": "10.30", "subject": "OOC", "Hall": "N3C" },
-    { "day": "mon", "time": "13.30", "subject": "OOC", "Hall": "B502" }
+  "groups": [
+    {
+      "id": "4.1",
+      "data": [
+        {
+          "day": "mon",
+          "start": "10:30",
+          "end": "12:30",
+          "subject": "SPM",
+          "type": "lecture",
+          "hall_1": "N3E",
+          "hall_2": ""
+        },
+        {
+          "day": "mon",
+          "start": "13:30",
+          "end": "15:30",
+          "subject": "OOC",
+          "type": "lab",
+          "hall_1": "601 PC Lab NEW",
+          "hall_2": "N3B Lab"
+        },
+        {
+          "day": "mon",
+          "start": "16.30",
+          "end": "17:30",
+          "subject": "OOC",
+          "type": "lecture",
+          "hall_1": "13H-A",
+          "hall_2": ""
+        },
+        {
+          "day": "tue",
+          "start": "13.30",
+          "end": "15:30",
+          "subject": "ISDM",
+          "type": "lab",
+          "hall_1": "B403 PC Lab",
+          "hall_2": "A405 PC Lab"
+        },
+        {
+          "day": "tue",
+          "start": "15.30",
+          "end": "17:30",
+          "subject": "ISDM",
+          "type": "lecture",
+          "hall_1": "B501",
+          "hall_2": ""
+        }
+      ]
+    },
+    {
+      "id": "4.2",
+      "data": [
+        {
+          "day": "mon",
+          "start": "10:30",
+          "end": "12:30",
+          "subject": "SPM",
+          "type": "lecture",
+          "hall_1": "N3E",
+          "hall_2": ""
+        },
+        {
+          "day": "mon",
+          "start": "13:30",
+          "end": "15:30",
+          "subject": "OOC",
+          "type": "lab",
+          "hall_1": "601 PC Lab NEW",
+          "hall_2": "N3B Lab"
+        },
+        {
+          "day": "mon",
+          "start": "16.30",
+          "end": "17:30",
+          "subject": "OOC",
+          "type": "lecture",
+          "hall_1": "13H-A",
+          "hall_2": ""
+        },
+        {
+          "day": "tue",
+          "start": "13.30",
+          "end": "15:30",
+          "subject": "ISDM",
+          "type": "lab",
+          "hall_1": "B403 PC Lab",
+          "hall_2": "A405 PC Lab"
+        },
+        {
+          "day": "tue",
+          "start": "15.30",
+          "end": "17:30",
+          "subject": "ISDM",
+          "type": "lecture",
+          "hall_1": "B501",
+          "hall_2": ""
+        }
+      ]
+    },
+    {
+      "id": "3.1",
+      "data": [
+        {
+          "day": "mon",
+          "start": "10:30",
+          "end": "12:30",
+          "subject": "SPM",
+          "type": "lecture",
+          "hall_1": "N3E",
+          "hall_2": ""
+        },
+        {
+          "day": "mon",
+          "start": "13:30",
+          "end": "15:30",
+          "subject": "OOC",
+          "type": "lab",
+          "hall_1": "601 PC Lab NEW",
+          "hall_2": "N3B Lab"
+        },
+        {
+          "day": "mon",
+          "start": "16.30",
+          "end": "17:30",
+          "subject": "OOC",
+          "type": "lecture",
+          "hall_1": "13H-A",
+          "hall_2": ""
+        },
+        {
+          "day": "tue",
+          "start": "13.30",
+          "end": "15:30",
+          "subject": "ISDM",
+          "type": "lab",
+          "hall_1": "B403 PC Lab",
+          "hall_2": "A405 PC Lab"
+        },
+        {
+          "day": "tue",
+          "start": "15.30",
+          "end": "17:30",
+          "subject": "ISDM",
+          "type": "lecture",
+          "hall_1": "B501",
+          "hall_2": ""
+        }
+      ]
+    }
   ]
 }
