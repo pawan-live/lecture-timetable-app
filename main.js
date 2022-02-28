@@ -266,38 +266,13 @@ function fetchJSON() {
   return db;
 }
 
-// Get time difference
-function getTimeDiff(time1, time2) {
-  var todayDate =
-    now.getDate() +
-    "/" +
-    parseInt(now.getMonth() + 1) + // getMonth() returns month starting from 0, convert to int and add 1
-    "/" +
-    now.getFullYear();
-
-  let date1 = new Date(todayDate + " " + time1);
-  let date2 = new Date(todayDate + " " + time2);
-  console.log(todayDate + " " + time2);
-  var diff = date2.getTime() - date1.getTime();
-  var msec = diff;
-  console.log(msec);
-  var hh = Math.floor(msec / 1000 / 60 / 60);
-  msec -= hh * 1000 * 60 * 60;
-  var mm = Math.floor(msec / 1000 / 60);
-  msec -= mm * 1000 * 60;
-  var ss = Math.floor(msec / 1000);
-  msec -= ss * 1000;
-  let timeDiff = hh + ":" + mm;
-  return timeDiff;
-}
-
 // set avatar
 function setAvatar(seed) {
   document.getElementById("profile-pic").src =
     "https://avatars.dicebear.com/api/adventurer-neutral/" + seed + ".svg";
 }
 
-// display date, month, day, time
+// renders date, month, day, time
 function displayTime() {
   document.getElementById("date").innerHTML =
     "It's " + date[0] + ", " + date[1] + " " + date[2];
