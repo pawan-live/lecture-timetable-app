@@ -178,10 +178,6 @@ const loginScreen = document.getElementById("login-section");
 {
   // console.log(hh + ":" + mm);
 }
-
-// testing
-getTimeDifference("23:55");
-
 //Check for cookies
 let cookies = checkCookies();
 
@@ -336,17 +332,6 @@ function getTimeDifference(item_time) {
 
   time_difference[0] = hour_difference;
   time_difference[1] = min_difference;
-
-  console.log("hours: " + now_hour);
-  console.log("minutes: " + now_mins);
-
-  console.log("item hour: " + item_hour);
-  console.log("item mins: " + item_mins);
-
-  console.log("hour dff: " + hour_difference);
-  console.log("min dff: " + min_difference);
-
-  console.log(time_difference);
 
   return time_difference;
 }
