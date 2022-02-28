@@ -156,6 +156,7 @@ let data = {
 
 let day = "mon";
 let group_id = "4.1";
+const now = new Date();
 /*********** DECLARATIONS ***********/
 
 var username, group;
@@ -175,19 +176,6 @@ const loginScreen = document.getElementById("login-section");
 /*********** SEQUENCE ***********/
 
 {
-  var date3 = new Date(); //now
-  var date1 = new Date("08/06/2015 00:00");
-  var date2 = new Date("08/06/2015 02:56");
-
-  var diff = date2.getTime() - date1.getTime();
-  var msec = diff;
-  console.log(msec);
-  var hh = Math.floor(msec / 1000 / 60 / 60);
-  msec -= hh * 1000 * 60 * 60;
-  var mm = Math.floor(msec / 1000 / 60);
-  msec -= mm * 1000 * 60;
-  var ss = Math.floor(msec / 1000);
-  msec -= ss * 1000;
   // console.log(hh + ":" + mm);
 }
 
@@ -239,6 +227,19 @@ getTodayLecs(function () {
   console.log(todayLectures);
 });
 
+let timedifftest = getTimeDiff("10:30", "12:30");
+console.log(timedifftest);
+
+let newDate =
+  now.getDate() +
+  "/" +
+  now.getMonth() +
+  "/" +
+  now.getFullYear() +
+  " " +
+  todayLectures[0].start;
+// console.log(newDate);
+
 // console.log(data.groups[1].id);
 
 /********** FUNCTIONS ***********/
@@ -267,6 +268,31 @@ function fetchJSON() {
       let db = jsondata;
     });
   return db;
+}
+
+// Get time difference
+function getTimeDiff(time1, time2) {
+  var todayDate =
+    now.getDate() +
+    "/" +
+    parseInt(now.getMonth() + 1) + // getMonth() returns month starting from 0, convert to int and add 1
+    "/" +
+    now.getFullYear();
+
+  let date1 = new Date(todayDate + " " + time1);
+  let date2 = new Date(todayDate + " " + time2);
+  console.log(todayDate + " " + time2);
+  var diff = date2.getTime() - date1.getTime();
+  var msec = diff;
+  console.log(msec);
+  var hh = Math.floor(msec / 1000 / 60 / 60);
+  msec -= hh * 1000 * 60 * 60;
+  var mm = Math.floor(msec / 1000 / 60);
+  msec -= mm * 1000 * 60;
+  var ss = Math.floor(msec / 1000);
+  msec -= ss * 1000;
+  let timeDiff = hh + ":" + mm;
+  return timeDiff;
 }
 
 // set avatar
@@ -389,19 +415,18 @@ function getNextDay() {
   // code here
 }
 
-var date3 = new Date(); //now
-var date1 = new Date("08/06/2015 00:00");
-var date2 = new Date("08/06/2015 02:56");
+// var date3 = new Date(); //now
+// var date1 = new Date("08/06/2015 00:00");
+// var date2 = new Date("08/06/2015 02:56");
 
-var diff = date2.getTime() - date1.getTime();
-var msec = diff;
-console.log(msec);
-var hh = Math.floor(msec / 1000 / 60 / 60);
-msec -= hh * 1000 * 60 * 60;
-var mm = Math.floor(msec / 1000 / 60);
-msec -= mm * 1000 * 60;
-var ss = Math.floor(msec / 1000);
-msec -= ss * 1000;
+// var diff = date2.getTime() - date1.getTime();
+// var msec = diff;
+// var hh = Math.floor(msec / 1000 / 60 / 60);
+// msec -= hh * 1000 * 60 * 60;
+// var mm = Math.floor(msec / 1000 / 60);
+// msec -= mm * 1000 * 60;
+// var ss = Math.floor(msec / 1000);
+// msec -= ss * 1000;
 // console.log(hh + ":" + mm);
 
 // Clear cookies
