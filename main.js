@@ -169,7 +169,7 @@ let nextLectures; //object array to store next upcoming lectures
 
 const date = findDate();
 
-/*********** DOM ***********/
+/*********** DOM VARIABLES ***********/
 
 const loginScreen = document.getElementById("login-section");
 
@@ -211,6 +211,11 @@ getTodayLecs(function () {
 
 /********** FUNCTIONS ***********/
 
+/* get today lecs
+ * loops through the data object to to find
+ * all the lectures on the same date and
+ * assigns it to an array todayLectures[] */
+
 function getTodayLecs(callback) {
   for (let i = 0; i < data.groups.length; i++) {
     if (data.groups[i].id == group_id) {
@@ -223,6 +228,8 @@ function getTodayLecs(callback) {
   }
   callback();
 }
+
+// fetch data object from json file
 
 // // Fetch JSON file
 // function fetchJSON() {
@@ -251,11 +258,11 @@ function renderTime() {
   document.getElementById("am_pm").innerHTML = date[4];
 }
 
-// Get time difference
-// uses the findDate() function to extract the
-// current time.
-// assuming item_time is a string in the format
-// "hh:mm"
+/* Get time difference
+ * uses the findDate() function to extract the
+ * current time.
+ * assuming item_time is a string in the format
+ * "hh:mm" */
 
 function getTimeDifference(item_time) {
   const date = findDate();
