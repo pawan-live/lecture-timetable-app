@@ -175,9 +175,6 @@ const loginScreen = document.getElementById("login-section");
 
 /*********** SEQUENCE ***********/
 
-{
-  // console.log(hh + ":" + mm);
-}
 //Check for cookies
 let cookies = checkCookies();
 
@@ -206,37 +203,11 @@ if (cookies == false) {
   setAvatar(Math.floor(Math.random() * 100 + 1));
 }
 
-displayTime(); //displays time in the greeting card
-
-// fetch("./table.json")
-//   .then((response) => {
-//     return response.json();
-//   })
-//   .then((jsondata) => {
-//     object = jsondata;
-//     console.log(object);
-//   });
-
-// console.log(date[5]); //24h time
+renderTime(); //displays time in the greeting card
 
 getTodayLecs(function () {
   console.log(todayLectures);
 });
-
-let timedifftest = getTimeDiff("10:30", "12:30");
-console.log(timedifftest);
-
-let newDate =
-  now.getDate() +
-  "/" +
-  now.getMonth() +
-  "/" +
-  now.getFullYear() +
-  " " +
-  todayLectures[0].start;
-// console.log(newDate);
-
-// console.log(data.groups[1].id);
 
 /********** FUNCTIONS ***********/
 
@@ -253,34 +224,34 @@ function getTodayLecs(callback) {
   callback();
 }
 
-// Fetch JSON file
-function fetchJSON() {
-  fetch("./table.json")
-    .then((response) => {
-      return response.json();
-    })
-    .then((jsondata) => {
-      //code here
-      let db = jsondata;
-    });
-  return db;
-}
+// // Fetch JSON file
+// function fetchJSON() {
+//   fetch("./table.json")
+//     .then((response) => {
+//       return response.json();
+//     })
+//     .then((jsondata) => {
+//       //code here
+//       let db = jsondata;
+//     });
+//   return db;
+// }
 
-// set avatar
+// set avatar (renders the avatar)
 function setAvatar(seed) {
   document.getElementById("profile-pic").src =
     "https://avatars.dicebear.com/api/adventurer-neutral/" + seed + ".svg";
 }
 
 // renders date, month, day, time
-function displayTime() {
+function renderTime() {
   document.getElementById("date").innerHTML =
     "It's " + date[0] + ", " + date[1] + " " + date[2];
   document.getElementById("time_now").innerHTML = date[3];
   document.getElementById("am_pm").innerHTML = date[4];
 }
 
-// get time difference
+// Get time difference
 // uses the findDate() function to extract the
 // current time.
 // assuming item_time is a string in the format
@@ -375,20 +346,6 @@ function getCookie(cname) {
 function getNextDay() {
   // code here
 }
-
-// var date3 = new Date(); //now
-// var date1 = new Date("08/06/2015 00:00");
-// var date2 = new Date("08/06/2015 02:56");
-
-// var diff = date2.getTime() - date1.getTime();
-// var msec = diff;
-// var hh = Math.floor(msec / 1000 / 60 / 60);
-// msec -= hh * 1000 * 60 * 60;
-// var mm = Math.floor(msec / 1000 / 60);
-// msec -= mm * 1000 * 60;
-// var ss = Math.floor(msec / 1000);
-// msec -= ss * 1000;
-// console.log(hh + ":" + mm);
 
 // Clear cookies
 function clearCookies() {
