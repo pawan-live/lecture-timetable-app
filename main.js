@@ -58,7 +58,7 @@ let data = {
           day: "mon",
           start: "10:30",
           end: "12:30",
-          subject: "SPM",
+          subject: "OOC",
           type: "lecture",
           hall_1: "N3E",
           hall_2: "",
@@ -67,7 +67,7 @@ let data = {
           day: "mon",
           start: "13:30",
           end: "15:30",
-          subject: "OOC",
+          subject: "SPM",
           type: "lab",
           hall_1: "601 PC Lab NEW",
           hall_2: "N3B Lab",
@@ -157,6 +157,7 @@ let data = {
 let day = "mon";
 let group_id = "4.1";
 const now = new Date();
+
 /*********** DECLARATIONS ***********/
 
 var username, group;
@@ -209,7 +210,11 @@ getTodayLecs(function () {
   console.log(todayLectures);
 });
 
-/********** FUNCTIONS ***********/
+renderTodayLecs(function () {
+  console.log("Displayed next lec");
+});
+
+/********** FUNCTIONS ***** ******/
 
 /* get today lecs
  * loops through the data object to to find
@@ -243,6 +248,15 @@ function getTodayLecs(callback) {
 //     });
 //   return db;
 // }
+
+// Render today lectures
+function renderTodayLecs(callback) {
+  document.getElementById("lec_next_title").innerHTML =
+    todayLectures[0].subject;
+  document.getElementById("lec_2_title").innerHTML = todayLectures[1].subject;
+  document.getElementById("lec_3_title").innerHTML = todayLectures[2].subject;
+  callback();
+}
 
 // set avatar (renders the avatar)
 function setAvatar(seed) {
