@@ -130,6 +130,20 @@ h2.header_2 {
   font-weight: 500;
 }
 
+.lec_type_div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.lec_type {
+  margin-left: 15px;
+  padding: 1px 10px 3px 10px;
+  background-color: rgb(235, 155, 221);
+  color: rgb(37, 32, 37);
+  border-radius: 150px;
+}
+
 /* footer section */
 .footer {
   display: flex;

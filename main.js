@@ -191,7 +191,7 @@ if (cookies == false) {
           setCookie("group", group, 120);
           console.log("cookies set successfully");
           displayUserDetails(); //displays username and group
-          setAvatar(Math.floor(Math.random() * 100 + 1));
+          // setAvatar(Math.floor(Math.random() * 100 + 1));
         });
         loginScreen.style.display = "none";
       });
@@ -201,7 +201,7 @@ if (cookies == false) {
   username = getCookie("username");
   group = getCookie("group");
   displayUserDetails();
-  setAvatar(Math.floor(Math.random() * 100 + 1));
+  // setAvatar(Math.floor(Math.random() * 100 + 1));
 }
 
 renderTime(); //displays time in the greeting card
