@@ -158,6 +158,8 @@ let day = "mon";
 let group_id = "4.1";
 const now = new Date();
 
+/*Edited*/
+
 /*********** DECLARATIONS ***********/
 
 var username, group;
