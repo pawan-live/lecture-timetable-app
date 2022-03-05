@@ -138,9 +138,10 @@ h2.header_2 {
 
 .lec_type {
   margin-left: 15px;
-  padding: 1px 10px 3px 10px;
-  background-color: rgb(235, 155, 221);
-  color: rgb(37, 32, 37);
+  padding: 1px 10px 3px 12px;
+  background-color: rgb(233, 206, 228);
+  color: rgb(114, 78, 114);
+  border: 1.5px solid rgb(170, 105, 158);
   border-radius: 150px;
 }
 

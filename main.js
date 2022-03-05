@@ -27,7 +27,7 @@ let data = {
           start: "16.30",
           end: "17:30",
           subject: "OOC",
-          type: "lecture",
+          type: "practical",
           hall_1: "13H-A",
           hall_2: "",
         },
@@ -255,14 +255,61 @@ function renderTodayLecs(callback) {
     todayLectures[0].subject;
   document.getElementById("lec_2_title").innerHTML = todayLectures[1].subject;
   document.getElementById("lec_3_title").innerHTML = todayLectures[2].subject;
+  // render times
+  document.getElementById("lec_next_type").innerHTML = todayLectures[0].type;
+  document.getElementById("lec_2_type").innerHTML = todayLectures[1].type;
+  document.getElementById("lec_3_type").innerHTML = todayLectures[2].type;
+  // render start time
+  document.getElementById("lec_next_start_time").innerHTML =
+    todayLectures[0].start;
+  document.getElementById("lec_next_end_time").innerHTML = todayLectures[0].end;
+
+  document.getElementById("lec_2_start_time").innerHTML =
+    todayLectures[1].start;
+  document.getElementById("lec_2_end_time").innerHTML = todayLectures[1].end;
+
+  document.getElementById("lec_3_start_time").innerHTML =
+    todayLectures[2].start;
+  document.getElementById("lec_3_end_time").innerHTML = todayLectures[2].end;
+
+  // render halls
+  // next_lec
+  let lec_next_hall_2;
+  let lec_2_hall_2;
+  let lec_3_hall_2;
+  if (todayLectures[0].hall_2) {
+    lec_next_hall_2 = " / " + todayLectures[0].hall_2;
+  } else {
+    lec_next_hall_2 = "";
+  }
+  document.getElementById("lec_next_hall").innerHTML =
+    todayLectures[0].hall_1 + lec_next_hall_2;
+
+  // lec 2
+  if (todayLectures[1].hall_2) {
+    lec_2_hall_2 = " / " + todayLectures[1].hall_2;
+  } else {
+    lec_2_hall_2 = "";
+  }
+  document.getElementById("lec_2_hall").innerHTML =
+    todayLectures[1].hall_1 + lec_2_hall_2;
+
+  // lec 3
+  if (todayLectures[2].hall_2) {
+    lec_3_hall_2 = "& " + todayLectures[2].hall_2;
+  } else {
+    lec_3_hall_2 = "";
+  }
+  document.getElementById("lec_3_hall").innerHTML =
+    "Hall " + todayLectures[2].hall_1 + lec_3_hall_2;
   callback();
 }
 
 // set avatar (renders the avatar)
-function setAvatar(seed) {
-  document.getElementById("profile-pic").src =
-    "https://avatars.dicebear.com/api/adventurer-neutral/" + seed + ".svg";
-}
+// function setAvatar(seed) {
+//   document.getElementById("profile-pic").src =
+//     "https://avatars.dicebear.com/api/adventurer-neutral/" + seed + ".svg";
+// }
 
 // renders date, month, day, time
 function renderTime() {
