@@ -210,8 +210,10 @@ getTodayLecs(function () {
   console.log(todayLectures);
 });
 
-renderTodayLecs(function () {
-  console.log("Displayed next lec");
+lecturesToday = 3; // get this from data table
+
+renderTodayLecsNew(function () {
+  console.log("Displayed next lecs");
 });
 
 /********** FUNCTIONS ***** ******/
@@ -249,41 +251,41 @@ function getTodayLecs(callback) {
 //   return db;
 // }
 
+// Render lectures for the day
+function renderTodayLecsNew(callback) {
+  for (let i = 0; i < lecturesToday; i++) {
+    let k = i + 1;
+    document.getElementById("lec_" + k.toString() + "_title").innerHTML =
+      todayLectures[i].subject;
+  }
+  for (let i = 0; i < lecturesToday; i++) {
+    let k = i + 1;
+    document.getElementById("lec_" + k.toString() + "_type").innerHTML =
+      todayLectures[i].type;
+  }
+  for (let i = 0; i < lecturesToday; i++) {
+    let k = i + 1;
+    document.getElementById("lec_" + k.toString() + "_start_time").innerHTML =
+      todayLectures[i].start;
+    document.getElementById("lec_" + k.toString() + "_end_time").innerHTML =
+      todayLectures[i].end;
+  }
+}
+
 // Render today lectures
-function renderTodayLecs(callback) {
-  document.getElementById("lec_next_title").innerHTML =
-    todayLectures[0].subject;
-  document.getElementById("lec_2_title").innerHTML = todayLectures[1].subject;
-  document.getElementById("lec_3_title").innerHTML = todayLectures[2].subject;
-  // render times
-  document.getElementById("lec_next_type").innerHTML = todayLectures[0].type;
-  document.getElementById("lec_2_type").innerHTML = todayLectures[1].type;
-  document.getElementById("lec_3_type").innerHTML = todayLectures[2].type;
-  // render start time
-  document.getElementById("lec_next_start_time").innerHTML =
-    todayLectures[0].start;
-  document.getElementById("lec_next_end_time").innerHTML = todayLectures[0].end;
-
-  document.getElementById("lec_2_start_time").innerHTML =
-    todayLectures[1].start;
-  document.getElementById("lec_2_end_time").innerHTML = todayLectures[1].end;
-
-  document.getElementById("lec_3_start_time").innerHTML =
-    todayLectures[2].start;
-  document.getElementById("lec_3_end_time").innerHTML = todayLectures[2].end;
-
+function renderTodayLecHalls(callback) {
   // render halls
   // next_lec
-  let lec_next_hall_2;
+  let lec_1_hall_2;
   let lec_2_hall_2;
   let lec_3_hall_2;
   if (todayLectures[0].hall_2) {
-    lec_next_hall_2 = " / " + todayLectures[0].hall_2;
+    lec_1_hall_2 = " / " + todayLectures[0].hall_2;
   } else {
-    lec_next_hall_2 = "";
+    lec_1_hall_2 = "";
   }
-  document.getElementById("lec_next_hall").innerHTML =
-    todayLectures[0].hall_1 + lec_next_hall_2;
+  document.getElementById("lec_1_hall").innerHTML =
+    todayLectures[0].hall_1 + lec_1_hall_2;
 
   // lec 2
   if (todayLectures[1].hall_2) {
