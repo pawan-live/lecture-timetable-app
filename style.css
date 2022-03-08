@@ -113,17 +113,17 @@ h2.header_2 {
   font-size: 20px;
 }
 
-#lec_next_title,
-#lec_next_status {
+#lec_1_title,
+#lec_1_status {
   color: rgb(16, 82, 124);
 }
 
-#lec_next_hall,
-#lec_next_time {
+#lec_1_hall,
+#lec_1_time {
   color: rgb(62, 100, 124);
 }
 
-#lec_next_status {
+#lec_1_status {
   margin-top: 20px;
   font-family: "Rubik", sans-serif;
   font-size: 21px;
