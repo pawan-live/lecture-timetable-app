@@ -24,7 +24,7 @@ let data = {
         },
         {
           day: "mon",
-          start: "16.30",
+          start: "16:30",
           end: "17:30",
           subject: "OOC",
           type: "practical",
@@ -33,7 +33,7 @@ let data = {
         },
         {
           day: "tue",
-          start: "13.30",
+          start: "13:30",
           end: "15:30",
           subject: "ISDM",
           type: "lab",
@@ -42,11 +42,65 @@ let data = {
         },
         {
           day: "tue",
-          start: "15.30",
+          start: "15:30",
           end: "17:30",
           subject: "ISDM",
           type: "lecture",
           hall_1: "B501",
+          hall_2: "",
+        },
+        {
+          day: "wed",
+          start: "08:30",
+          end: "11:30",
+          subject: "IWT",
+          type: "lecture",
+          hall_1: "B502",
+          hall_2: "",
+        },
+        {
+          day: "wed",
+          start: "12:30",
+          end: "13:30",
+          subject: "OOC",
+          type: "Tutorial",
+          hall_1: "B401",
+          hall_2: "",
+        },
+        {
+          day: "wed",
+          start: "13:30",
+          end: "14:30",
+          subject: "ISDM",
+          type: "Tutorial",
+          hall_1: "B501",
+          hall_2: "",
+        },
+        {
+          day: "thu",
+          start: "08:30",
+          end: "09:30",
+          subject: "ISDM",
+          type: "Practical",
+          hall_1: "601-Pclab(New)",
+          hall_2: "",
+        },
+        {
+          day: "thu",
+          start: "13:30",
+          end: "17:30",
+          subject: "EAP",
+          type: "lecture",
+          hall_1: "New3C",
+          hall_2: "",
+        },
+        {
+          day: "fri",
+          start: "15:30",
+          end: "17:30",
+          subject: "SPM",
+          type: "Practical/Tutorial",
+          hall_1: "Virtual",
           hall_2: "",
         },
       ],
@@ -74,7 +128,7 @@ let data = {
         },
         {
           day: "mon",
-          start: "16.30",
+          start: "16:30",
           end: "17:30",
           subject: "OOC",
           type: "lecture",
@@ -83,7 +137,7 @@ let data = {
         },
         {
           day: "tue",
-          start: "13.30",
+          start: "13:30",
           end: "15:30",
           subject: "ISDM",
           type: "lab",
@@ -92,11 +146,65 @@ let data = {
         },
         {
           day: "tue",
-          start: "15.30",
+          start: "15:30",
           end: "17:30",
           subject: "ISDM",
           type: "lecture",
           hall_1: "B501",
+          hall_2: "",
+        },
+        {
+          day: "wed",
+          start: "08:30",
+          end: "11:30",
+          subject: "IWT",
+          type: "lecture",
+          hall_1: "B502",
+          hall_2: "",
+        },
+        {
+          day: "wed",
+          start: "13:30",
+          end: "14:30",
+          subject: "ISDM",
+          type: "Tutorial",
+          hall_1: "B501",
+          hall_2: "",
+        },
+        {
+          day: "wed",
+          start: "14:30",
+          end: "15:30",
+          subject: "OOC",
+          type: "Tutorial",
+          hall_1: "602+603 Lab",
+          hall_2: "",
+        },
+        {
+          day: "thu",
+          start: "08:30",
+          end: "09:30",
+          subject: "IWT",
+          type: "Practical",
+          hall_1: "N3A",
+          hall_2: "",
+        },
+        {
+          day: "thu",
+          start: "13:30",
+          end: "17:30",
+          subject: "EAP",
+          type: "lecture",
+          hall_1: "New3C",
+          hall_2: "",
+        },
+        {
+          day: "fri",
+          start: "15:30",
+          end: "17:30",
+          subject: "SPM",
+          type: "Practical/Tutorial",
+          hall_1: "Virtual",
           hall_2: "",
         },
       ],
@@ -157,6 +265,11 @@ let data = {
 let day = "mon";
 let group_id = "4.1";
 const now = new Date();
+
+/*Edited*/
+
+/*comment 2*/
+
 
 /*********** DECLARATIONS ***********/
 
