@@ -4,7 +4,7 @@
       "id": "4.1",
       "data": [
         {
-          "day": "mon",
+          "day": "Monday",
           "start": "10:30",
           "end": "12:30",
           "subject": "SPM",
@@ -13,7 +13,7 @@
           "hall_2": ""
         },
         {
-          "day": "mon",
+          "day": "Monday",
           "start": "13:30",
           "end": "15:30",
           "subject": "OOC",
@@ -22,7 +22,7 @@
           "hall_2": "N3B Lab"
         },
         {
-          "day": "mon",
+          "day": "Monday",
           "start": "16.30",
           "end": "17:30",
           "subject": "OOC",
@@ -31,7 +31,7 @@
           "hall_2": ""
         },
         {
-          "day": "tue",
+          "day": "Tuesday",
           "start": "13.30",
           "end": "15:30",
           "subject": "ISDM",
@@ -40,7 +40,7 @@
           "hall_2": "A405 PC Lab"
         },
         {
-          "day": "tue",
+          "day": "Tuesday",
           "start": "15.30",
           "end": "17:30",
           "subject": "ISDM",
@@ -54,7 +54,7 @@
       "id": "4.2",
       "data": [
         {
-          "day": "mon",
+          "day": "Monday",
           "start": "10:30",
           "end": "12:30",
           "subject": "SPM",
@@ -63,7 +63,7 @@
           "hall_2": ""
         },
         {
-          "day": "mon",
+          "day": "Monday",
           "start": "13:30",
           "end": "15:30",
           "subject": "OOC",
@@ -72,7 +72,7 @@
           "hall_2": "N3B Lab"
         },
         {
-          "day": "mon",
+          "day": "Monday",
           "start": "16.30",
           "end": "17:30",
           "subject": "OOC",
@@ -81,7 +81,7 @@
           "hall_2": ""
         },
         {
-          "day": "tue",
+          "day": "Tuesday",
           "start": "13.30",
           "end": "15:30",
           "subject": "ISDM",
@@ -90,7 +90,7 @@
           "hall_2": "A405 PC Lab"
         },
         {
-          "day": "tue",
+          "day": "Tuesday",
           "start": "15.30",
           "end": "17:30",
           "subject": "ISDM",
@@ -104,7 +104,7 @@
       "id": "3.1",
       "data": [
         {
-          "day": "mon",
+          "day": "Monday",
           "start": "10:30",
           "end": "12:30",
           "subject": "SPM",
@@ -113,7 +113,7 @@
           "hall_2": ""
         },
         {
-          "day": "mon",
+          "day": "Monday",
           "start": "13:30",
           "end": "15:30",
           "subject": "OOC",
@@ -122,7 +122,7 @@
           "hall_2": "N3B Lab"
         },
         {
-          "day": "mon",
+          "day": "Monday",
           "start": "16.30",
           "end": "17:30",
           "subject": "OOC",
@@ -131,7 +131,7 @@
           "hall_2": ""
         },
         {
-          "day": "tue",
+          "day": "Tuesday",
           "start": "13.30",
           "end": "15:30",
           "subject": "ISDM",
@@ -140,7 +140,7 @@
           "hall_2": "A405 PC Lab"
         },
         {
-          "day": "tue",
+          "day": "Tuesday",
           "start": "15.30",
           "end": "17:30",
           "subject": "ISDM",

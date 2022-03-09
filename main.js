@@ -212,8 +212,7 @@ let data = {
   ],
 };
 
-let group_id = "4.1";
-const now = new Date();
+// const now = new Date();
 
 /*********** DECLARATIONS ***********/
 
@@ -221,7 +220,7 @@ var username, group;
 var next_status; //stores string values [today, tomorrow, in 2 days,3 days, etc...]
 
 // Create an object array for today's lectures
-const todayLectures = []; //object array to store all details of lectures today
+var todayLectures = []; //object array to store all details of lectures today
 let nextLectures; //object array to store next upcoming lectures
 // day = today's day. ex: Monday, Tuesday etc
 
@@ -284,7 +283,7 @@ renderTodayLecsNew(function () {
 
 function getTodayLecs(callback) {
   for (let i = 0; i < data.groups.length; i++) {
-    if (data.groups[i].id == group_id) {
+    if (data.groups[i].id == group) {
       for (let j = 0; j < data.groups[i].data.length; j++) {
         if (data.groups[i].data[j].day == day) {
           todayLectures[j] = data.groups[i].data[j];
@@ -334,10 +333,14 @@ function renderTodayLecsNew(callback) {
 function renderLecHallsNew(callback) {
   const todayLecHalls = [];
 
-  for (let i = 0; i < todayLectures; i++) {}
+  for (let i = 0; i < todayLectures; i++) {
+    todayLecHalls[i] = todayLectures[i].hall_1;
+    console.log(todayLecHalls[i]);
+  }
 }
 
 // Render today lectures
+/*
 function renderTodayLecHalls(callback) {
   // render halls
   // next_lec
@@ -370,7 +373,9 @@ function renderTodayLecHalls(callback) {
   document.getElementById("lec_3_hall").innerHTML =
     "Hall " + todayLectures[2].hall_1 + lec_3_hall_2;
   callback();
-}
+} 
+
+*/
 
 // set avatar (renders the avatar)
 // function setAvatar(seed) {
@@ -511,18 +516,18 @@ function findDate() {
 
   const weekday = [
     "Sunday",
-    "Mondayday",
-    "Tuesdaysday",
-    "Wednesdaynesday",
-    "Thursdayrsday",
-    "Fridayday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
     "Saturday",
   ];
 
   const d = new Date();
 
   dateArray[0] = weekday[d.getDay()];
-  dateArray[1] = Mondayth[d.getMondayth()];
+  dateArray[1] = Mondayth[d.getMonth()];
   dateArray[2] = d.getDate();
   let minutes = d.getMinutes().toLocaleString("en-US", {
     minimumIntegerDigits: 2,
