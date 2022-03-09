@@ -274,6 +274,10 @@ renderTodayLecsNew(function () {
   console.log("Displayed next lecs");
 });
 
+renderLecHallsNew(function () {
+  console.log("Displayed lec halls");
+});
+
 /********** FUNCTIONS ***** ******/
 
 /* get today lecs
@@ -284,9 +288,11 @@ renderTodayLecsNew(function () {
 function getTodayLecs(callback) {
   for (let i = 0; i < data.groups.length; i++) {
     if (data.groups[i].id == group) {
+      let k = 0;
       for (let j = 0; j < data.groups[i].data.length; j++) {
         if (data.groups[i].data[j].day == day) {
-          todayLectures[j] = data.groups[i].data[j];
+          todayLectures[k] = data.groups[i].data[k];
+          k = k + 1;
         }
       }
     }
@@ -331,9 +337,9 @@ function renderTodayLecsNew(callback) {
 }
 
 function renderLecHallsNew(callback) {
-  const todayLecHalls = [];
+  let todayLecHalls = [];
 
-  for (let i = 0; i < todayLectures; i++) {
+  for (let i = 0; i < todayLectures.length; i++) {
     todayLecHalls[i] = todayLectures[i].hall_1;
     console.log(todayLecHalls[i]);
   }
