@@ -5,7 +5,7 @@ let data = {
       id: "4.1",
       data: [
         {
-          day: "mon",
+          day: "Monday",
           start: "10:30",
           end: "12:30",
           subject: "SPM",
@@ -14,7 +14,7 @@ let data = {
           hall_2: "",
         },
         {
-          day: "mon",
+          day: "Monday",
           start: "13:30",
           end: "15:30",
           subject: "OOC",
@@ -23,7 +23,7 @@ let data = {
           hall_2: "N3B Lab",
         },
         {
-          day: "mon",
+          day: "Monday",
           start: "16:30",
           end: "17:30",
           subject: "OOC",
@@ -32,7 +32,7 @@ let data = {
           hall_2: "",
         },
         {
-          day: "tue",
+          day: "Tuesday",
           start: "13:30",
           end: "15:30",
           subject: "ISDM",
@@ -41,7 +41,7 @@ let data = {
           hall_2: "A405 PC Lab",
         },
         {
-          day: "tue",
+          day: "Tuesday",
           start: "15:30",
           end: "17:30",
           subject: "ISDM",
@@ -50,7 +50,7 @@ let data = {
           hall_2: "",
         },
         {
-          day: "wed",
+          day: "Wednesday",
           start: "08:30",
           end: "11:30",
           subject: "IWT",
@@ -59,7 +59,7 @@ let data = {
           hall_2: "",
         },
         {
-          day: "wed",
+          day: "Wednesday",
           start: "12:30",
           end: "13:30",
           subject: "OOC",
@@ -68,7 +68,7 @@ let data = {
           hall_2: "",
         },
         {
-          day: "wed",
+          day: "Wednesday",
           start: "13:30",
           end: "14:30",
           subject: "ISDM",
@@ -77,7 +77,7 @@ let data = {
           hall_2: "",
         },
         {
-          day: "thu",
+          day: "Thursday",
           start: "08:30",
           end: "09:30",
           subject: "ISDM",
@@ -86,7 +86,7 @@ let data = {
           hall_2: "",
         },
         {
-          day: "thu",
+          day: "Thursday",
           start: "13:30",
           end: "17:30",
           subject: "EAP",
@@ -95,7 +95,7 @@ let data = {
           hall_2: "",
         },
         {
-          day: "fri",
+          day: "Friday",
           start: "15:30",
           end: "17:30",
           subject: "SPM",
@@ -109,7 +109,7 @@ let data = {
       id: "4.2",
       data: [
         {
-          day: "mon",
+          day: "Monday",
           start: "10:30",
           end: "12:30",
           subject: "OOC",
@@ -118,7 +118,7 @@ let data = {
           hall_2: "",
         },
         {
-          day: "mon",
+          day: "Monday",
           start: "13:30",
           end: "15:30",
           subject: "SPM",
@@ -127,7 +127,7 @@ let data = {
           hall_2: "N3B Lab",
         },
         {
-          day: "mon",
+          day: "Monday",
           start: "16:30",
           end: "17:30",
           subject: "OOC",
@@ -136,7 +136,7 @@ let data = {
           hall_2: "",
         },
         {
-          day: "tue",
+          day: "Tuesday",
           start: "13:30",
           end: "15:30",
           subject: "ISDM",
@@ -145,7 +145,7 @@ let data = {
           hall_2: "A405 PC Lab",
         },
         {
-          day: "tue",
+          day: "Tuesday",
           start: "15:30",
           end: "17:30",
           subject: "ISDM",
@@ -154,7 +154,7 @@ let data = {
           hall_2: "",
         },
         {
-          day: "wed",
+          day: "Wednesday",
           start: "08:30",
           end: "11:30",
           subject: "IWT",
@@ -163,7 +163,7 @@ let data = {
           hall_2: "",
         },
         {
-          day: "wed",
+          day: "Wednesday",
           start: "13:30",
           end: "14:30",
           subject: "ISDM",
@@ -172,7 +172,7 @@ let data = {
           hall_2: "",
         },
         {
-          day: "wed",
+          day: "Wednesday",
           start: "14:30",
           end: "15:30",
           subject: "OOC",
@@ -181,7 +181,7 @@ let data = {
           hall_2: "",
         },
         {
-          day: "thu",
+          day: "Thursday",
           start: "08:30",
           end: "09:30",
           subject: "IWT",
@@ -190,7 +190,7 @@ let data = {
           hall_2: "",
         },
         {
-          day: "thu",
+          day: "Thursday",
           start: "13:30",
           end: "17:30",
           subject: "EAP",
@@ -199,7 +199,7 @@ let data = {
           hall_2: "",
         },
         {
-          day: "fri",
+          day: "Friday",
           start: "15:30",
           end: "17:30",
           subject: "SPM",
@@ -209,67 +209,11 @@ let data = {
         },
       ],
     },
-    {
-      id: "3.1",
-      data: [
-        {
-          day: "mon",
-          start: "10:30",
-          end: "12:30",
-          subject: "SPM",
-          type: "lecture",
-          hall_1: "N3E",
-          hall_2: "",
-        },
-        {
-          day: "mon",
-          start: "13:30",
-          end: "15:30",
-          subject: "OOC",
-          type: "lab",
-          hall_1: "601 PC Lab NEW",
-          hall_2: "N3B Lab",
-        },
-        {
-          day: "mon",
-          start: "16.30",
-          end: "17:30",
-          subject: "OOC",
-          type: "lecture",
-          hall_1: "13H-A",
-          hall_2: "",
-        },
-        {
-          day: "tue",
-          start: "13.30",
-          end: "15:30",
-          subject: "ISDM",
-          type: "lab",
-          hall_1: "B403 PC Lab",
-          hall_2: "A405 PC Lab",
-        },
-        {
-          day: "tue",
-          start: "15.30",
-          end: "17:30",
-          subject: "ISDM",
-          type: "lecture",
-          hall_1: "B501",
-          hall_2: "",
-        },
-      ],
-    },
   ],
 };
 
-let day = "mon";
 let group_id = "4.1";
 const now = new Date();
-
-/*Edited*/
-
-/*comment 2*/
-
 
 /*********** DECLARATIONS ***********/
 
@@ -279,9 +223,11 @@ var next_status; //stores string values [today, tomorrow, in 2 days,3 days, etc.
 // Create an object array for today's lectures
 const todayLectures = []; //object array to store all details of lectures today
 let nextLectures; //object array to store next upcoming lectures
-// day = today's day. ex: mon, tue etc
+// day = today's day. ex: Monday, Tuesday etc
 
 const date = findDate();
+let day = date[0];
+console.log("today is " + day);
 
 /*********** DOM VARIABLES ***********/
 
@@ -385,6 +331,12 @@ function renderTodayLecsNew(callback) {
   }
 }
 
+function renderLecHallsNew(callback) {
+  const todayLecHalls = [];
+
+  for (let i = 0; i < todayLectures; i++) {}
+}
+
 // Render today lectures
 function renderTodayLecHalls(callback) {
   // render halls
@@ -426,7 +378,7 @@ function renderTodayLecHalls(callback) {
 //     "https://avatars.dicebear.com/api/adventurer-neutral/" + seed + ".svg";
 // }
 
-// renders date, month, day, time
+// renders date, Mondayth, day, time
 function renderTime() {
   document.getElementById("date").innerHTML =
     "It's " + date[0] + ", " + date[1] + " " + date[2];
@@ -532,15 +484,17 @@ function getNextDay() {
 
 // Clear cookies
 function clearCookies() {
-  document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
-  document.cookie = "group=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+  document.cookie =
+    "username=; expires=Thursday, 01 Jan 1970 00:00:00 UTC; path=/";
+  document.cookie =
+    "group=; expires=Thursday, 01 Jan 1970 00:00:00 UTC; path=/";
   location.reload();
 }
 
-// Get date, month, day to an array
+// Get date, Mondayth, day to an array
 function findDate() {
   const dateArray = [];
-  const month = [
+  const Mondayth = [
     "January",
     "February",
     "March",
@@ -557,18 +511,18 @@ function findDate() {
 
   const weekday = [
     "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
+    "Mondayday",
+    "Tuesdaysday",
+    "Wednesdaynesday",
+    "Thursdayrsday",
+    "Fridayday",
     "Saturday",
   ];
 
   const d = new Date();
 
   dateArray[0] = weekday[d.getDay()];
-  dateArray[1] = month[d.getMonth()];
+  dateArray[1] = Mondayth[d.getMondayth()];
   dateArray[2] = d.getDate();
   let minutes = d.getMinutes().toLocaleString("en-US", {
     minimumIntegerDigits: 2,
