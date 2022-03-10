@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Fira Sans", sans-serif;
+}
+
+nav {
+  border: 1px solid yellowgreen;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#navbar-group-label {
+  margin-left: 10px;
+  background-color: rgb(175, 245, 12);
+  border-radius: 25px;
+  padding: 2px 6px 1px 5px;
+}
+
+section {
+  border: 1px solid green;
+  display: flex;
+  justify-content: center;
+  /* check if a padding should be added */
+}
+
+.container {
+  max-width: 400px;
+  width: 100%;
+  border: 1px solid red;
+  padding: 10px 10px;
+}
+
+.card {
+  border: 1px solid pink;
+  border-radius: 10px;
+  padding: 10px 10px;
+  /* add background color */
+}
+
+.lec-title {
+  display: flex;
+  align-items: center;
+}
+
+.lec-subject {
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
+.lec-type {
+  margin-left: 10px;
+  background-color: rgb(175, 245, 12);
+  border-radius: 25px;
+  padding: 2px 8px 2px 8px;
+  text-transform: uppercase;
+}
