@@ -7,140 +7,58 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Rubik:wght@300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-    <title>Timetable for Group 4</title>
+
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Lecture Timetable</title>
   </head>
   <body>
-    <!-- Header and navbar -->
-    <header>
-      <div class="navbar">
-        <h1 class="header_navbar">Timetable</h1>
-        <p id="group" class="group_label_navbar">4.2</p>
+    <!-- Navbar -->
+    <nav>
+      <div class="container">
+        <div class="navbar-logo-container">
+          <div class="navbar-logo">Timetable</div>
+          <div id="navbar-group-label">0.0</div>
+        </div>
       </div>
-    </header>
+    </nav>
 
     <!-- Greeting section -->
-    <section id="greeting_section">
-      <div id="greeting_card" class="container">
-        <div class="card greeting_card">
-          <div class="greeting">
-            <p class="text">
-              <span id="day_time">Good morning, </span>
-              <span id="username"></span>!
-            </p>
-            <p id="date" class="text"></p>
-          </div>
-          <div class="time_div">
-            <span id="time_now" class="time">00:00</span> <span id="am_pm">AM</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="upcoming_section">
+    <section id="greeting-section">
       <div class="container">
-        <h2 class="header_2">
-          Upcoming next <span id="next_day">today</span>,
-        </h2>
-        <div class="cards_wrapper">
-          <!-- Next lecture card -->
-          <div class="card next_lec_card">
-            <div class="lecture_details">
-              <p id="lec_next_title" class="card_lec_title">OOC Practical</p>
-              <p id="lec_next_hall" class="card_lec_hall">NEW HALL 01</p>
-              <p id="lec_next_time" class="card_lec_time">
-                <span id="lec_next_start_time">2:30 PM</span> -
-                <span id="lec_next_end_time"></span>3:30 PM
-              </p>
-            </div>
-            <p id="lec_next_status">
-              <span id="started_state">Starts in </span>
-              <span id="time_state">10 mins</span>
-            </p>
-          </div>
-
-          <!-- Later lecture cards -->
-          <div class="card later_lec_card">
-            <div class="lecture_details">
-              <p id="lec_2_title" class="card_lec_title">OOC Lecture</p>
-              <p id="lec_2_hall" class="card_lec_hall">NEW HALL 01</p>
-              <p id="lec_2_time" class="card_lec_time">
-                <span id="lec_2_start_time">2:30 PM</span> -
-                <span id="lec_2_end_time"></span>3:30 PM
-              </p>
-            </div>
-          </div>
-
-          <div class="card later_lec_card">
-            <div class="lecture_details">
-              <p id="lec_3_title" class="card_lec_title">SPM Practical</p>
-              <p id="lec_3_hall" class="card_lec_hall">NEW HALL 01</p>
-              <p id="lec_3_time" class="card_lec_time">
-                <span id="lec_3_start_time">2:30 PM</span> -
-                <span id="lec_3_end_time"></span>3:30 PM
-              </p>
-            </div>
+        <div class="card-container">
+          <div id="greeting-card" class="card">
+            <div id="greeting-text">Hello</div>
+            <div id="clock">00:00 AM</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Login section -->
-    <section id="login-section">
-      <div class="login-wrapper">
-        <div class="login-form">
-          <!-- <div class="container"> -->
-            <p class="text login-form-title">Hello 👋</p>
-            <form id="login-form">
-              <!-- field 1 -->
-              <label class="text form-label" for="nickname"
-                >Your name/nickname:</label
-              ><br />
-              <input
-                class="form-field"
-                type="text"
-                id="nickname"
-                name="nickname"
-              /><br />
-              <!-- field 2 -->
-              
-              <label class="text form-label" for="group-dropdown"
-                >Select your subgroup:</label
-              > <br>
-              <select name="group" id="group-dropdown">
-                <option value="4.1">4.1</option>
-                <option value="4.2">4.2</option>
-              </select>
-              <br />
-              <!-- submit btn -->
-              <input
-                id="login-submit-btn"
-                class="submit-btn"
-                type="button"
-                value="OK ✅"
-              />
-            </form>
+    <!-- Next lectures -->
+    <section id="next-section">
+      <div class="container">
+        <div id="card-container" class="card-container">
+          <!-- Card 1 (default) -->
+          <div id="lec-1" class="card">
+            <div class="lec-title">
+              <div id="lec-1-subject" class="lec-subject">Subject</div>
+              <div id="lec-1-type" class="lec-type">Lecture</div>
+            </div>
+            <div class="lec-time">
+              <span id="lec-1-start">00:00 AM</span> -
+              <span id="lec-1-end">00:00 AM</span>
+            </div>
+            <div id="lec-1-hall" class="lec-hall">Hall 01</div>
           </div>
+
+          <!-- Later cards (generated by js) -->
         </div>
       </div>
     </section>
 
-    <!-- Footer section -->
-    <footer>
-      <div class="footer">
-        <p class="text">
-          Footer text here.
-          <a href="https://github.com/pawan-live/lecture-timetable-app"
-            >Contribute on GitHub 💚</a
-          >
-          <button type="button" onclick="clearCookies()">Clear cookies</button>
-        </p>
-      </div>
-    </footer>
-    <img id="profile-pic"  alt="">
-    <script src="main.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
