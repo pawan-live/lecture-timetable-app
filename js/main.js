@@ -1,6 +1,9 @@
 const todayLectures = []; // store lecture objects for the current day
+let jsondata;
 
 renderCards(todayLectures.length);
+let dataTable = fetchJSON();
+console.log(dataTable);
 
 /* FUNCTIONS */
 function renderCards(num) {
@@ -27,3 +30,29 @@ function renderCards(num) {
       "</div>\n";
   }
 }
+
+// Fetch JSON file
+// function fetchJSON() {
+//   fetch("http://127.0.0.1:5500/table.json")
+//     .then((response) => {
+//       return response.json();
+//     })
+//     .then((jsondata) => {
+//       //code here
+//       // var db = [];
+//       // db = jsondata;
+//       // console.log(jsondata);
+//       return jsondata;
+//     });
+// }
+
+// function fetchJSON() {
+fetch("http://127.0.0.1:5500/table.json")
+  .then(function (u) {
+    return u.json();
+  })
+  .then(function (json) {
+    jsondata = json;
+  });
+// return jsondata;
+// }
