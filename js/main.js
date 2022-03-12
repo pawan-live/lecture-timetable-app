@@ -1,13 +1,13 @@
 const todayLectures = []; // store lecture objects for the current day
-let jsondata;
 
-renderCards(todayLectures.length);
-let dataTable = fetchJSON();
-console.log(dataTable);
+let dataTable, jsondata;
+
+renderCards(todayLectures.length, fetchJSON("./table.json"));
+// fetchJSON();
 
 /* FUNCTIONS */
-function renderCards(num) {
-  for (let i = 0; i < num - 2; i++) {
+function renderCards(num, callback) {
+  for (let i = 0; i < num - 1; i++) {
     document.getElementById("card-container").innerHTML +=
       '<div id="lec-' +
       i +
@@ -29,30 +29,23 @@ function renderCards(num) {
       "</div>\n" +
       "</div>\n";
   }
+  callback;
+}
+
+function displayAll(callback) {
+  callback;
 }
 
 // Fetch JSON file
-// function fetchJSON() {
-//   fetch("http://127.0.0.1:5500/table.json")
-//     .then((response) => {
-//       return response.json();
-//     })
-//     .then((jsondata) => {
-//       //code here
-//       // var db = [];
-//       // db = jsondata;
-//       // console.log(jsondata);
-//       return jsondata;
-//     });
-// }
-
-// function fetchJSON() {
-fetch("http://127.0.0.1:5500/table.json")
-  .then(function (u) {
-    return u.json();
-  })
-  .then(function (json) {
-    jsondata = json;
-  });
-// return jsondata;
-// }
+function fetchJSON(url) {
+  fetch(url)
+    .then((response) => {
+      return response.json();
+    })
+    .then((jsondata) => {
+      dataTable = jsondata;
+    })
+    .then(() => {
+      console.log(dataTable);
+    });
+}
